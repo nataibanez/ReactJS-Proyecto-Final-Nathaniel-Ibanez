@@ -1,0 +1,4 @@
+.item-list-container {
+    background: rgb(0,0,3);
+    background: linear-gradient(180deg, rgba(0,0,3,1) 0%, rgba(8,8,27,1) 35%, rgba(44,64,68,1) 100%);;
+}
