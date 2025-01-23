@@ -40,6 +40,17 @@ const CheckoutForm = ({dataForm, handleChangeFormInput, handleSubmitForm}) => {
                     />
                 </div>
                 <div className="checkout--form-group">
+                    <label htmlFor="email2">Repetir Correo electrónico:</label>
+                    <input
+                        type="email"
+                        id="email2"
+                        name="email2"
+                        value={dataForm.email2}
+                        onChange={handleChangeFormInput}
+                        className="checkout--input"
+                    />
+                </div>
+                <div className="checkout--form-group">
                     <button className="checkout--submit-button" type="submit">Terminar compra</button>
                 </div>
             </form>

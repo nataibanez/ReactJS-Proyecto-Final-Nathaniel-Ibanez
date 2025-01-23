@@ -12,7 +12,8 @@ const Checkout = () => {
     const [dataForm, setDataForm] = useState({
         fullname: "",
         phone: "",
-        email: ""
+        email: "",
+        email2: "",
         }
     );
 

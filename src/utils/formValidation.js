@@ -1,4 +1,5 @@
 import { object, string } from "yup";
+import * as Yup from "yup";
 
 // Vale la pena mencionar que phone no se puede trabajar como number debido a que las validaciones .min y .max miden el valor y no el length
 // El workaround es solicitar string y limitar a números
@@ -14,6 +15,11 @@ let userSchema = object ({
     email:
         string("El correo electrónico sólo admite letras y símbolos")
         .email("El correo electrónico debe tener formato usuario@servidor.com")
+        .required("El correo electrónico es obligatorio"),
+    email2:
+        string("El correo electrónico sólo admite letras y símbolos")
+        .email("El correo electrónico debe tener formato usuario@servidor.com")
+        .oneOf([Yup.ref("email"), null], "Los correos electrónicos no coinciden")
         .required("El correo electrónico es obligatorio"),
 })
 
