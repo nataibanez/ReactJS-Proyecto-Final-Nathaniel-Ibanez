@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
+import BeatLoader from "react-spinners/BeatLoader";
 import './itemlistcontainer.scss';
 import ItemList from "./ItemList.jsx";
 import db from "../../db/db.js";
@@ -60,6 +61,18 @@ const ItemListContainer = ({ motd }) => {
       : getProductsFromFirebase()
     setIsLoading(true);
   }, [categoryId]);
+
+  // Early return mientras carga la página
+  if (isLoading) {
+    return (
+      <div className="loading--spinner">
+        <BeatLoader  
+        margin={0}
+        size={40}
+        />
+    </div>
+    )
+  }
 
   return (
     <div className="body--motd">

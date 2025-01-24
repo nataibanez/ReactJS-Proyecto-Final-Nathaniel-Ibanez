@@ -5,7 +5,6 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import Error404 from './components/Errors/Error404/Error404';
-import ErrorProductNotFound from './components/Errors/ErrorProductNotFound/ErrorProductNotFound';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from './context/CartContext';
 
